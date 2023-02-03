@@ -1,12 +1,14 @@
 ---
-title: "Data that changes over time"
+title: "Forecasting of Non-stationary Time Series"
 date: "2021-12-01"
 github_link: ""
-description: "Benchmarks, datasets are static, and ignore the evolution of the effects they're trying to capture. Data does change over time, and that brings the need for models to be continously re-trained as well."
+description: "We live in the world of Complex Dynamical Systems. Forecasting the future requires a different approach to other Machine Learning fields."
 tag: "timeseries"
 favorite: true
 ---
 
-# Data that changes over time
+# Time Series Forecasting
 
-
+Forecasting the future is the essential business problem, as well as the hardest of all.
+We're experts in modeling non-stationary time series, where the underlying process that generates the data changes over time.
+Like in all Complex Dynamical Systems.

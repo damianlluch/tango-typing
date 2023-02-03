@@ -1,13 +1,13 @@
 ---
-title: "Laplace - Recommendation engine"
+title: "Laplace"
 date: "2022-07-01"
 github_link: "https://github.com/dream-faster/laplace-gnn-recommendation"
-description: "Large scale recommendation leveraging Graph Neural Networks."
+description: "Large scale recommendation leveraging Graph Neural Networks"
 tag: "neurosymbolic,graphs"
-favorite: true
+favorite: false
 ---
 
-# Laplace - Recommendation Engine
+# Laplace
 
 
 ## Overview

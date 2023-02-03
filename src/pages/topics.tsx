@@ -19,7 +19,7 @@ export default function Index({
       meta={
         <Meta
           title="Topics >> Dream Faster AI Studio"
-          description="Independent R&D studio specialized in Artificial Intelligence."
+          description="Independent R&D studio specialized in Artificial Intelligence and Nowcasting."
           social_card_ending="topics"
         />
       }

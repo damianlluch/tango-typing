@@ -23,18 +23,17 @@ const About = () => (
         <h2> Studio </h2>
         <p>
           We are Dream Faster, a Machine Learning Research Studio specialized in
-          translating State-of-the-Art algorithms into practical use-cases.
-          Based in Berlin, we currently collaborate with Machine Learning
-          Practicioners and Researcherss across Europe and the Americas.
+          Nowcasting (high frequency, short term forecasting) of Complex
+          Dynamical Systems (Finance, Energy). Based in Berlin, we currently
+          collaborate with Machine Learning Practicioners and Researchers across
+          Europe and the Americas.
           <br />
           <br />
           Some of the topics we are interested in:
           <br />
-          - Code Intelligence with Machine Learning
+          - Forecasting Non-stationary Time Series
           <br />
-          - Graph Neural Networks
-          <br />
-          - Timeseries analysis and decision under uncertainity
+          - Bringing uncertainty measurements into our forecasting process
           <br />
           - Neuro-symbolic approaches, eg. symbolic regression.
           <br />
