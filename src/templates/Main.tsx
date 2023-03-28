@@ -1,13 +1,13 @@
-import { Router } from 'next/router';
-import Script from 'next/script';
-import type { ReactNode } from 'react';
-import { useState } from 'react';
+import { Router } from "next/router";
+import Script from "next/script";
+import type { ReactNode } from "react";
+import { useState } from "react";
 
-import Background from '@/components/Background';
-import { Footer } from '@/components/Footer';
-import Menu from '@/components/Menu';
+import Background from "@/components/Background";
+import { Footer } from "@/components/Footer";
+import Menu from "@/components/Menu";
 
-import OneSection from './OneSection';
+import OneSection from "./OneSection";
 
 type IMainProps = {
   meta: ReactNode;
@@ -32,7 +32,7 @@ const Main = (props: IMainProps) => {
         data-utcoffset="1"
       />
     );
-  Router.events.on('routeChangeComplete', handleRouteChange);
+  Router.events.on("routeChangeComplete", handleRouteChange);
 
   return (
     <div className="h-full min-h-screen w-screen overflow-hidden bg-zinc-100 text-gray-700 antialiased dark:bg-slate-800">

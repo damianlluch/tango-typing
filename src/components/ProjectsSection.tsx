@@ -1,6 +1,6 @@
-import ProjectButton from '@/components/ProjectButton';
+import ProjectButton from "@/components/ProjectButton";
 
-import Plus from './Plus';
+import Plus from "./Plus";
 
 const ProjectsSection = ({
   allPostsData,

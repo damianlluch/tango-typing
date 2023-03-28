@@ -1,8 +1,8 @@
-import { MajorButton } from './MajorButton';
+import { MajorButton } from "./MajorButton";
 import {
   CommunityAvatarSection,
   ProfileCardSection,
-} from './ProfileCardSection';
+} from "./ProfileCardSection";
 
 export const Hero = () => (
   <div className="flex h-full w-full flex-col justify-between md:min-h-[calc(100vh-16rem)]">
@@ -13,22 +13,23 @@ export const Hero = () => (
         {/* <p className="underline decoration-yellow-400 underline-offset-2"> */}
         <p>
           <b>
-            We are an independent Machine Learning Research and Development
-            Studio based in Berlin.
+            We are a Machine Learning Studio, specialized in
+            Nowcasting/Forecasting, based in Berlin.
           </b>
         </p>
       </article>
 
-      <article className="prose prose-zinc h-full w-full max-w-2xl px-12 font-mono text-sm text-black opacity-60 dark:prose-invert dark:text-slate-300">
+      <article className="prose prose-zinc h-full w-full max-w-3xl px-12 font-mono text-sm text-black opacity-60 dark:prose-invert dark:text-slate-300">
         <p className=" w-full whitespace-pre-line">
           {`\n`}We aspire to:{`\n`}
-          {[
-            'Work with experts to develop useful tools and solutions to real-world problems',
-            // 'Revitalize forgotten ideas in AI',
-            'Create interpretable ML to expand human knowledge',
-            'Explore if ML practices hold up to scrutiny and revitalize forgotten ideas in AI',
-            'Make state of the art algorithms more convenient to access',
-          ].map((e) => `* ${e}\n`)}
+          <p className="ml-4">
+            {[
+              "Build the most usable, open-core Time-Series Machine Learning tools available.",
+              "Bring speed, rigour and transparency to the field of Forecasting/Nowcasting.",
+              "Work with experts to develop useful tools and solutions to real-world problems.",
+              "Make state of the art Time-Series models accessible to everyone.",
+            ].map((e) => `>> ${e}\n\n`)}
+          </p>
         </p>
       </article>
     </div>
@@ -39,7 +40,7 @@ export const Hero = () => (
       </div>
       <div className="-ml-2 px-12">
         <MajorButton text="Who we are" link="/about" />
-        <MajorButton text="Collaborate with us" link="/collaborate" primary />
+        <MajorButton text="Speak with us" link="/speak" primary />
       </div>
     </div>
   </div>

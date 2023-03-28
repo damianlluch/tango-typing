@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-import { MajorButton } from './MajorButton';
+import { MajorButton } from "./MajorButton";
 
-const FORM_ENDPOINT = ''; // TODO - fill on the later step
+const FORM_ENDPOINT = ""; // TODO - fill on the later step
 
 const ContactForm = () => {
   const [submitted, setSubmitted] = useState(false);

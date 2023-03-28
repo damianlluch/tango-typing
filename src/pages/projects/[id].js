@@ -1,9 +1,9 @@
-import { getAllPostIds, getPostData } from '@/lib/projects';
-import { getSortedTopicsData } from '@/lib/topics';
+import { getAllPostIds, getPostData } from "@/lib/projects";
+import { getSortedTopicsData } from "@/lib/topics";
 
-import { Meta } from '@/layouts/Meta.tsx';
-import { Main } from '@/templates/Main.tsx';
-import { ProjectPage } from '@/components/ProjectPage.tsx';
+import { Meta } from "@/layouts/Meta.tsx";
+import { Main } from "@/templates/Main.tsx";
+import { ProjectPage } from "@/components/ProjectPage.tsx";
 
 export default function Post({ postData, filteredTopics }) {
   return (
@@ -48,7 +48,7 @@ export async function getStaticProps({ params }) {
   const topicData = await getSortedTopicsData();
 
   const filteredTopics = topicData.filter((topic) =>
-    postData.tag.split(',').includes(topic.tag.split(',')[0])
+    postData.tag.split(",").includes(topic.tag.split(",")[0])
   );
 
   return {

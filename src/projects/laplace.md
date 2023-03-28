@@ -9,12 +9,11 @@ favorite: false
 
 # Laplace
 
-
 ## Overview
 
-**laplace** is an end-to-end recommendation engine framework for large-scale graphs. 
+**laplace** is an end-to-end recommendation engine framework for large-scale graphs.
 
-The pipeline is designed for self-supervised edge prediction on heterogenous graphs. 
+The pipeline is designed for self-supervised edge prediction on heterogenous graphs.
 
 <br>
 
@@ -31,8 +30,8 @@ The pipeline is designed for self-supervised edge prediction on heterogenous gra
 - Works on **Heterogenous** graphs
   - User based training, validation and test splitting
   - N-hop neighborhood aggregation
-  - Node Features 
+  - Node Features
   - Works on any number of node types
 - Advanced preprocessing of tabular data into graphs
   - **Neo4j** integration for better visualization and handling of large graphs.
- No newline at end of file
+    No newline at end of file

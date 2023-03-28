@@ -1,8 +1,8 @@
-import { MajorButton } from '@/components/MajorButton';
-import { Article } from '@/templates/Article';
-import OneSection from '@/templates/OneSection';
+import { MajorButton } from "@/components/MajorButton";
+import { Article } from "@/templates/Article";
+import OneSection from "@/templates/OneSection";
 
-import ProjectsSection from './ProjectsSection';
+import ProjectsSection from "./ProjectsSection";
 
 export const ProjectPage = ({ data, relatedData, relatedType }) => (
   <div className="w-full">
@@ -19,16 +19,12 @@ export const ProjectPage = ({ data, relatedData, relatedType }) => (
     <OneSection title="  ">
       <div className="flex w-full flex-col items-start justify-start px-12">
         <p className="mb-2">
-          Interested in {data.title} or projects like it?
+          Interested in {data.title} or similar projects/topics?
           <br />
           <b>Get in touch with us:</b>
         </p>
         <div className="-ml-2">
-          <MajorButton
-            text="Collaborate with us"
-            link="/collaborate"
-            primary={false}
-          />
+          <MajorButton text="Speak with us" link="/speak" primary={false} />
         </div>
       </div>
     </OneSection>

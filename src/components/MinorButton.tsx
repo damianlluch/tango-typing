@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from "next/link";
 
 export const MinorButton = ({ text, to }: { text: string; to: string }) => (
   <Link href={to}>

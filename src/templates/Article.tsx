@@ -1,8 +1,8 @@
-import type { ReactNode } from 'react';
+import type { ReactNode } from "react";
 
-import BreadcrumbSection from '@/components/BreadcrumbSection';
+import BreadcrumbSection from "@/components/BreadcrumbSection";
 
-import OneSection from './OneSection';
+import OneSection from "./OneSection";
 
 type IMainProps = {
   children: ReactNode;

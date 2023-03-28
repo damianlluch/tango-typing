@@ -19,7 +19,7 @@ export const Avatar = ({
   <div className="my-0 mr-3 flex flex-none items-start justify-start ">
     <img
       className={`my-0 ${
-        large ? 'h-20 w-20' : 'h-10 w-10'
+        large ? "h-20 w-20" : "h-10 w-10"
       } rounded border border-solid border-yellow-400 shadow-lg`}
       src={profile_url}
       alt="Rounded avatar"
@@ -40,7 +40,7 @@ export const ProfileCard = ({
 }) => (
   <div
     className={`mb-2 mr-6 flex max-w-2xl flex-row font-mono ${
-      large ? 'text-sm' : 'text-xs'
+      large ? "text-sm" : "text-xs"
     }`}
   >
     <Avatar profile_url={profile_url} large={large} />
@@ -49,7 +49,7 @@ export const ProfileCard = ({
       <div className="flex w-full flex-row flex-wrap">
         {urls.map((url, i) => (
           <div key={i} className="text-gray-500">
-            {i !== 0 && '•'}
+            {i !== 0 && "•"}
             <TinyLink name={url.name} url={url.url} />
           </div>
         ))}

@@ -1,8 +1,8 @@
-import Head from 'next/head';
-import { useRouter } from 'next/router';
-import { NextSeo } from 'next-seo';
+import Head from "next/head";
+import { useRouter } from "next/router";
+import { NextSeo } from "next-seo";
 
-import { AppConfig } from '@/utils/AppConfig';
+import { AppConfig } from "@/utils/AppConfig";
 
 type IMetaProps = {
   title: string;
@@ -60,10 +60,10 @@ const Meta = (props: IMetaProps) => {
           site_name: AppConfig.site_name,
           images: [
             {
-              url: `https://www.fasterdream.com/assets/images/social_card_${props.social_card_ending}.png`,
+              url: `https://dreamfaster.ai/assets/images/social_card_${props.social_card_ending}.png`,
               width: 1200,
               height: 630,
-              alt: 'Dream Faster AI Studio Social OG Image',
+              alt: "Dream Faster AI Studio Social OG Image",
             },
           ],
         }}

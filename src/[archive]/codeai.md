@@ -8,6 +8,3 @@ favorite: true
 ---
 
 # Sourcecode Intelligence
-
-
-

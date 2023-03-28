@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from "next/link";
 
 const Box = ({
   text,
@@ -12,14 +12,14 @@ const Box = ({
   external_link?: string;
 }) => (
   <a
-    href={external_link || ''}
+    href={external_link || ""}
     className={`mx-0 h-[calc(1rem+15px)] w-fit border border-yellow-400  px-3 py-1 text-right font-mono text-black no-underline  group-hover:border-yellow-400 group-hover:bg-yellow-400 group-hover:shadow-md dark:text-slate-300  ${
-      primary ? 'bg-yellow-400' : 'bg-transparent'
-    } ${primary ? 'group-hover:text-white' : 'group-hover:text-black'} ${
-      sibling ? 'ml-[-1px]' : 'ml-0'
-    } ${primary ? 'dark:text-slate-800' : 'dark:text-slate-300'}`}
-    rel={`${external_link ? 'noopener noreferrer' : 'noreferrer'}`}
-    target={`${external_link ? '_blank' : '_self'}`}
+      primary ? "bg-yellow-400" : "bg-transparent"
+    } ${primary ? "group-hover:text-white" : "group-hover:text-black"} ${
+      sibling ? "ml-[-1px]" : "ml-0"
+    } ${primary ? "dark:text-slate-800" : "dark:text-slate-300"}`}
+    rel={`${external_link ? "noopener noreferrer" : "noreferrer"}`}
+    target={`${external_link ? "_blank" : "_self"}`}
   >
     {text}
   </a>
@@ -42,24 +42,24 @@ export const MajorButton = ({
 }) =>
   external || type_ ? (
     <button
-      type={type_ || 'button'}
+      type={type_ || "button"}
       className={`group m-2 ${
-        solo ? 'ml-0' : 'ml-2'
+        solo ? "ml-0" : "ml-2"
       } h-fit min-h-[calc(1rem+9px)] min-w-fit py-1 shadow-none outline-none`}
     >
-      <Box primary={primary} text={text} external_link={type_ ? '' : link} />
+      <Box primary={primary} text={text} external_link={type_ ? "" : link} />
       <Box
         primary={primary}
-        text={'➡'}
+        text={"➡"}
         sibling
-        external_link={type_ ? '' : link}
+        external_link={type_ ? "" : link}
       />
     </button>
   ) : (
     <Link href={link}>
       <button className="group m-2 h-fit min-h-[calc(1rem+9px)] py-1 shadow-none outline-none ">
         <Box primary={primary} text={text} />
-        <Box primary={primary} text={'➡'} sibling />
+        <Box primary={primary} text={"➡"} sibling />
       </button>
     </Link>
   );

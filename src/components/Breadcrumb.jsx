@@ -1,13 +1,13 @@
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import React, { useEffect, useState } from 'react';
+import Link from "next/link";
+import { useRouter } from "next/router";
+import React, { useEffect, useState } from "react";
 
 const convertBreadcrumb = (string) => {
   return string
-    .replace(/-/g, ' ')
-    .replace(/oe/g, 'ö')
-    .replace(/ae/g, 'ä')
-    .replace(/ue/g, 'ü')
+    .replace(/-/g, " ")
+    .replace(/oe/g, "ö")
+    .replace(/ae/g, "ä")
+    .replace(/ue/g, "ü")
     .toUpperCase();
 };
 
@@ -17,13 +17,13 @@ const Breadcrumbs = () => {
 
   useEffect(() => {
     if (router) {
-      const linkPath = router.asPath.split('/');
+      const linkPath = router.asPath.split("/");
       linkPath.shift();
 
       let pathArray = linkPath.map((path, i) => {
         return {
           breadcrumb: path,
-          href: `/${linkPath.slice(0, i + 1).join('/')}`,
+          href: `/${linkPath.slice(0, i + 1).join("/")}`,
         };
       });
 
@@ -57,8 +57,8 @@ const Breadcrumbs = () => {
                 <a
                   className={`text-ellipsis whitespace-nowrap  border-none no-underline ${
                     i === breadcrumbs.length - 1
-                      ? 'text-yellow-400'
-                      : 'text-gray-600'
+                      ? "text-yellow-400"
+                      : "text-gray-600"
                   }`}
                 >{` / ${convertBreadcrumb(breadcrumb.breadcrumb)} `}</a>
               </Link>

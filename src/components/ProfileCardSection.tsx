@@ -1,41 +1,41 @@
-import Link from 'next/link';
+import Link from "next/link";
 
-import { Avatar, ProfileCard } from './ProfileCard';
+import { Avatar, ProfileCard } from "./ProfileCard";
 
 const userInfo = [
   {
-    name: 'Mark Aron Szulyovszky',
-    profile: '/assets/images/mark_profile.jpeg',
+    name: "Mark Aron Szulyovszky",
+    profile: "/assets/images/mark_profile.jpeg",
     urls: [
       {
-        name: 'linkedin',
-        url: 'https://www.linkedin.com/in/markszulyovszky/',
+        name: "linkedin",
+        url: "https://www.linkedin.com/in/almostintuitive/",
       },
       {
-        name: 'github',
-        url: 'https://github.com/itchingpixels',
+        name: "github",
+        url: "https://github.com/almostintuitive",
       },
       {
-        name: 'blog',
-        url: 'https://almostintuitive.com/',
+        name: "blog",
+        url: "https://almostintuitive.com/",
       },
     ],
   },
   {
-    name: 'Daniel Szemerey',
-    profile: '/assets/images/dani_profile.png',
+    name: "Daniel Szemerey",
+    profile: "/assets/images/dani_profile.png",
     urls: [
       {
-        name: 'linkedin',
-        url: 'https://www.linkedin.com/in/daniel-szemerey/',
+        name: "linkedin",
+        url: "https://www.linkedin.com/in/daniel-szemerey/",
       },
       {
-        name: 'github',
-        url: 'https://github.com/szemyd/',
+        name: "github",
+        url: "https://github.com/szemyd/",
       },
       {
-        name: 'blog',
-        url: 'https://szemerey.eu',
+        name: "blog",
+        url: "https://szemerey.eu",
       },
     ],
   },
@@ -43,36 +43,36 @@ const userInfo = [
 
 const communityInfo = [
   {
-    name: 'Charles Fried',
-    profile: '/assets/images/charles_fried_profile.jpg',
+    name: "Charles Fried",
+    profile: "/assets/images/charles_fried_profile.jpg",
     intro:
-      'Charles is currently building [Unsigned Research](https://unsigned-research.com/) with a simple goal to provide sustained and superior risk-adjusted returns, irrespective of the overall market direction, via systematic strategies.',
+      "Charles is currently building [Unsigned Research](https://unsigned-research.com/) with a simple goal to provide sustained and superior risk-adjusted returns, irrespective of the overall market direction, via systematic strategies.",
     urls: [
       {
-        name: 'linkedin',
-        url: 'https://www.linkedin.com/in/charles-fried',
+        name: "linkedin",
+        url: "https://www.linkedin.com/in/charles-fried",
       },
       {
-        name: 'twitter',
-        url: 'https://twitter.com/iSeekLong',
+        name: "twitter",
+        url: "https://twitter.com/iSeekLong",
       },
       {
-        name: 'website',
-        url: 'https://www.charlesfried.com/',
+        name: "website",
+        url: "https://www.charlesfried.com/",
       },
     ],
   },
   {
-    name: 'Zoltan C. Toth',
-    profile: '/assets/images/zoltan_toth_profile.jpeg',
+    name: "Zoltan C. Toth",
+    profile: "/assets/images/zoltan_toth_profile.jpeg",
     urls: [
       {
-        name: 'linkedin',
-        url: 'https://www.linkedin.com/in/zoltanctoth/',
+        name: "linkedin",
+        url: "https://www.linkedin.com/in/zoltanctoth/",
       },
       {
-        name: 'github',
-        url: 'https://github.com/zoltanctoth',
+        name: "github",
+        url: "https://github.com/zoltanctoth",
       },
       // {
       //   name: 'blog',
@@ -81,54 +81,54 @@ const communityInfo = [
     ],
   },
   {
-    name: 'Felix van Litsenburg',
-    profile: '/assets/images/felix_vanLitsenburg_profile.jpeg',
+    name: "Felix van Litsenburg",
+    profile: "/assets/images/felix_vanLitsenburg_profile.jpeg",
     urls: [
       {
-        name: 'linkedin',
-        url: 'https://www.linkedin.com/in/fvanlitsenburg/',
+        name: "linkedin",
+        url: "https://www.linkedin.com/in/fvanlitsenburg/",
       },
       {
-        name: 'website',
-        url: 'https://www.wetzoek.nl',
+        name: "website",
+        url: "https://www.wetzoek.nl",
       },
     ],
   },
   {
-    name: 'Peter Kadlot',
-    profile: '/assets/images/peter_kadlot_profile.jpeg',
+    name: "Peter Kadlot",
+    profile: "/assets/images/peter_kadlot_profile.jpeg",
     urls: [
       {
-        name: 'linkedin',
-        url: 'https://www.linkedin.com/in/peterkadlot/',
+        name: "linkedin",
+        url: "https://www.linkedin.com/in/peterkadlot/",
       },
       // {
       //   name: 'github',
       //   url: 'https://github.com/daralthus',
       // },
       {
-        name: 'twitter',
-        url: 'https://www.twitter.com/bonsaielectric/',
+        name: "twitter",
+        url: "https://www.twitter.com/bonsaielectric/",
       },
     ],
   },
   {
-    name: 'Ricardo Ferretti',
-    profile: '/assets/images/ricardo_ferretti_profile.jpeg',
+    name: "Ricardo Ferretti",
+    profile: "/assets/images/ricardo_ferretti_profile.jpeg",
     urls: [
       {
-        name: 'linkedin',
-        url: 'https://www.linkedin.com/in/riccardoferretti/',
+        name: "linkedin",
+        url: "https://www.linkedin.com/in/riccardoferretti/",
       },
       {
-        name: 'github',
-        url: 'https://github.com/riccardoferretti',
+        name: "github",
+        url: "https://github.com/riccardoferretti",
       },
     ],
   },
   {
-    name: 'Check out all',
-    profile: '/assets/images/placeholder_profile.svg',
+    name: "Check out all",
+    profile: "/assets/images/placeholder_profile.svg",
     more: true,
     urls: [],
     //   {
@@ -150,7 +150,7 @@ const communityInfo = [
 export const ProfileCardSection = ({ large }: { large?: boolean }) => (
   <div
     className={` flex h-full w-full flex-col flex-wrap items-start  ${
-      large ? 'justify-between' : 'justify-start'
+      large ? "justify-between" : "justify-start"
     } md:flex-row`}
   >
     {userInfo.map((user, i) => (
@@ -167,7 +167,7 @@ export const ProfileCardSection = ({ large }: { large?: boolean }) => (
 export const CommunityCardSection = ({ large }: { large?: boolean }) => (
   <div
     className={` flex h-full w-full flex-col flex-wrap items-start  ${
-      large ? 'justify-between' : 'justify-start'
+      large ? "justify-between" : "justify-start"
     } md:flex-row`}
   >
     {communityInfo.map(
@@ -191,23 +191,23 @@ export const CommunityAvatarSection = () => (
       (user, i) =>
         (i < 3 || user.more) && (
           <Link
-            href={`${i + 1 === communityInfo.length ? '/about#community' : ''}`}
+            href={`${i + 1 === communityInfo.length ? "/about#community" : ""}`}
             key={i}
             className={`group z-0 m-0 flex-none  hover:z-30 ${
-              i === 0 ? 'ml-0' : '-ml-7'
+              i === 0 ? "ml-0" : "-ml-7"
             } ${
               i + 1 === communityInfo.length
-                ? 'cursor-pointer'
-                : 'cursor-default'
+                ? "cursor-pointer"
+                : "cursor-default"
             }`}
           >
             <div
               className={`group z-0 m-0 flex-none  hover:z-30 ${
-                i === 0 ? 'ml-0' : '-ml-7'
+                i === 0 ? "ml-0" : "-ml-7"
               } ${
                 i + 1 === communityInfo.length
-                  ? 'cursor-pointer'
-                  : 'cursor-default'
+                  ? "cursor-pointer"
+                  : "cursor-default"
               }`}
             >
               <Avatar key={i} profile_url={user.profile} />

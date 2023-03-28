@@ -1,4 +1,4 @@
-import IconWrapper from './IconWrapper';
+import IconWrapper from "./IconWrapper";
 
 const Plus = () => (
   <IconWrapper>

@@ -1,10 +1,10 @@
-import BreadcrumbSection from '@/components/BreadcrumbSection';
-import ProjectsSection from '@/components/ProjectsSection';
-import Seperator from '@/components/Seperator';
-import { Meta } from '@/layouts/Meta';
-import { getSortedTopicsData } from '@/lib/topics';
-import { Main } from '@/templates/Main';
-import OneSection from '@/templates/OneSection';
+import BreadcrumbSection from "@/components/BreadcrumbSection";
+import ProjectsSection from "@/components/ProjectsSection";
+import Seperator from "@/components/Seperator";
+import { Meta } from "@/layouts/Meta";
+import { getSortedTopicsData } from "@/lib/topics";
+import { Main } from "@/templates/Main";
+import OneSection from "@/templates/OneSection";
 
 export default function Index({
   allPostsData,
@@ -18,8 +18,8 @@ export default function Index({
       wide={true}
       meta={
         <Meta
-          title="Topics >> Dream Faster AI Studio"
-          description="Independent R&D studio specialized in Artificial Intelligence and Nowcasting."
+          title="Topics >> Dream Faster AI"
+          description="ML Studio specialized in Forecasting/Nowcasting."
           social_card_ending="topics"
         />
       }

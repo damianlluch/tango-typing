@@ -1,11 +1,11 @@
-import { MajorButton } from '@/components/MajorButton';
+import { MajorButton } from "@/components/MajorButton";
 import {
   CommunityCardSection,
   ProfileCardSection,
-} from '@/components/ProfileCardSection';
-import { Meta } from '@/layouts/Meta';
-import { Article } from '@/templates/Article';
-import { Main } from '@/templates/Main';
+} from "@/components/ProfileCardSection";
+import { Meta } from "@/layouts/Meta";
+import { Article } from "@/templates/Article";
+import { Main } from "@/templates/Main";
 
 const About = () => (
   <Main
@@ -44,9 +44,9 @@ const About = () => (
           <h2 id="community"> Community </h2>
           Since 2021 we have been developing a community of likeminded
           individuals, who we meet weekly for: Project Demonstrations and Deep
-          Dives Mini-lectures on computational topics, eg.: Caustics Paper
-          Reviews on new, exciting papers. If you would like to apply to the
-          community then DM us on @hellosemy or @itchingpixels to join the
+          Dives Mini-lectures on computational topics, eg.: Caustics, Code AI,
+          reviews on new, exciting papers. If you would like to apply to the
+          community then DM us on @hellosemy or @almostintuitive to join the
           family.
           <br />
           <div className="mt-6 flex  w-full flex-col flex-wrap md:flex-row">

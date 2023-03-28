@@ -1,13 +1,13 @@
-import { Hero } from '@/components/Hero';
-import { MajorButton } from '@/components/MajorButton';
-import { MinorButton } from '@/components/MinorButton';
-import ProjectsSection from '@/components/ProjectsSection';
-import Seperator from '@/components/Seperator';
-import { Meta } from '@/layouts/Meta';
-import { getSortedPostsData } from '@/lib/projects';
-import { getSortedTopicsData } from '@/lib/topics';
-import { Main } from '@/templates/Main';
-import OneSection from '@/templates/OneSection';
+import { Hero } from "@/components/Hero";
+import { MajorButton } from "@/components/MajorButton";
+import { MinorButton } from "@/components/MinorButton";
+import ProjectsSection from "@/components/ProjectsSection";
+import Seperator from "@/components/Seperator";
+import { Meta } from "@/layouts/Meta";
+import { getSortedPostsData } from "@/lib/projects";
+import { getSortedTopicsData } from "@/lib/topics";
+import { Main } from "@/templates/Main";
+import OneSection from "@/templates/OneSection";
 
 export default function Index({
   allPostsData,
@@ -23,8 +23,8 @@ export default function Index({
       wide={true}
       meta={
         <Meta
-          title="Dream Faster AI Studio"
-          description="Independent R&D studio specialized in Artificial Intelligence."
+          title="Dream Faster - ML Studio"
+          description="ML Studio specialized in Forecasting/Nowcasting."
           social_card_ending="landing"
         />
       }
