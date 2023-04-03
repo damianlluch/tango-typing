@@ -4,6 +4,14 @@ import path from "path";
 import { remark } from "remark";
 import html from "remark-html";
 
+import { unified } from "unified";
+import remarkParse from "remark-parse";
+import remarkGfm from "remark-gfm";
+import remarkRehype from "remark-rehype";
+import rehypeStringify from "rehype-stringify";
+import rehypeRaw from "rehype-raw";
+import rehypeFormat from "rehype-format";
+
 const postsDirectory = path.join(process.cwd(), "src/_library/packages");
 
 export function getSortedPackagesData() {
@@ -47,12 +55,24 @@ export function getAllPostIds() {
   });
 }
 
-export async function getPostData(id) {
+async function getReadme(id) {
   const res = await fetch(
     `https://raw.githubusercontent.com/dream-faster/${id}/main/README.md`
   ).then((response) => response.text());
-  const fileContents = await res;
 
+  const file = await unified()
+    .use(remarkParse)
+    .use(remarkGfm)
+    .use(remarkRehype, { allowDangerousHtml: true })
+    .use(rehypeFormat)
+    .use(rehypeRaw)
+    .use(rehypeStringify)
+    .process(res);
+
+  return file;
+}
+export async function getPostData(id) {
+  const readme = await getReadme(id);
   const localMDPath = path.join(postsDirectory, `${id}.md`);
   const localFileContents = fs.readFileSync(localMDPath, "utf8");
 
@@ -64,10 +84,7 @@ export async function getPostData(id) {
     .use(html)
     .process(matterResult.content);
 
-  const processedContent = await remark().use(html).process(fileContents);
-
-  const contentHtml =
-    processedLocalContent.toString() + processedContent.toString();
+  const contentHtml = processedLocalContent.toString() + readme.toString();
 
   // Combine the data with the id and contentHtml
   return {
