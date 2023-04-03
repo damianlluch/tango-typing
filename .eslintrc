@@ -6,6 +6,7 @@
     "plugin:prettier/recommended"
   ],
   "rules": {
+    "no-nested-ternary": "off"
     // "prettier/prettier": [
     //   "error",
     //   {

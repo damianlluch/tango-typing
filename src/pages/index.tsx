@@ -4,20 +4,20 @@ import { MinorButton } from "@/components/MinorButton";
 import ProjectsSection from "@/components/ProjectsSection";
 import Seperator from "@/components/Seperator";
 import { Meta } from "@/layouts/Meta";
-import { getSortedPostsData } from "@/lib/projects";
+import { getSortedPackagesData } from "@/lib/packages";
 import { getSortedTopicsData } from "@/lib/topics";
 import { Main } from "@/templates/Main";
 import OneSection from "@/templates/OneSection";
 
 export default function Index({
-  allPostsData,
+  // allPostsData,
   allTopicsData,
+  allPackagesData,
 }: {
-  allPostsData: [string, string, string, string];
+  // allPostsData: [string, string, string, string];
   allTopicsData: [string, string, string, string];
+  allPackagesData: [string, string, string, string];
 }): JSX.Element {
-  // const router = useRouter();
-
   return (
     <Main
       wide={true}
@@ -32,10 +32,23 @@ export default function Index({
       <OneSection>
         <Hero />
       </OneSection>
-      <OneSection title="projects 👇">
-        <ProjectsSection allPostsData={allPostsData} baseUrl="projects" />
-        <MinorButton to="/projects" text="All Projects" />
+      <OneSection title="packages 👇" background_full>
+        <ProjectsSection
+          allPostsData={allPackagesData}
+          baseUrl="packages"
+          background_full
+          decorator="logo"
+        />
+        <MinorButton to="/packages" text="All Packages" />
       </OneSection>
+      {/* <OneSection title="projects 👇">
+        <ProjectsSection
+          allPostsData={allPostsData}
+          baseUrl="projects"
+          decorator="plus"
+        />
+        <MinorButton to="/projects" text="All Projects" />
+      </OneSection> */}
       <OneSection title="links 👇">
         <div className="flex flex-col flex-wrap items-start justify-start px-8 md:flex-row">
           <MajorButton
@@ -52,7 +65,12 @@ export default function Index({
         </div>
       </OneSection>
       <OneSection title="topics 👇">
-        <ProjectsSection allPostsData={allTopicsData} baseUrl="topics" all />
+        <ProjectsSection
+          allPostsData={allTopicsData}
+          baseUrl="topics"
+          all
+          decorator="plus"
+        />
         <MinorButton to="/topics" text="All Topics" />
       </OneSection>
       <Seperator />
@@ -61,12 +79,14 @@ export default function Index({
 }
 
 export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
+  // const allPostsData = getSortedProjectsData();
+  const allPackagesData = getSortedPackagesData();
   const allTopicsData = getSortedTopicsData();
   return {
     props: {
-      allPostsData,
+      // allPostsData,
       allTopicsData,
+      allPackagesData,
     },
   };
 }

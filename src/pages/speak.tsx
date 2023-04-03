@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import { MajorButton } from "@/components/MajorButton";
 import { Meta } from "@/layouts/Meta";
-import { getSortedPostsData } from "@/lib/projects";
+import { getSortedProjectsData } from "@/lib/projects";
 import { getSortedTopicsData } from "@/lib/topics";
 import { Article } from "@/templates/Article";
 import { Main } from "@/templates/Main";
@@ -149,7 +149,7 @@ const Collaborate = ({
 export default Collaborate;
 
 export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
+  const allPostsData = getSortedProjectsData();
   const allTopicsData = getSortedTopicsData();
   return {
     props: {

@@ -4,9 +4,9 @@ import path from "path";
 import { remark } from "remark";
 import html from "remark-html";
 
-const postsDirectory = path.join(process.cwd(), "src/_library/projects");
+const postsDirectory = path.join(process.cwd(), "src/_library/packages");
 
-export function getSortedProjectsData() {
+export function getSortedPackagesData() {
   // Get file names under /posts
   const fileNames = fs.readdirSync(postsDirectory);
   const allPostsData = fileNames.map((fileName) => {
@@ -20,25 +20,9 @@ export function getSortedProjectsData() {
     // Use gray-matter to parse the post metadata section
     const matterResult = matter(fileContents);
 
-    // const {
-    //   title,
-    //   date,
-    //   github_link,
-    //   description,
-    // }: {
-    //   title: string;
-    //   date: string;
-    //   github_link: string;
-    //   description: string;
-    // } = matterResult.data;
-
     // Combine the data with the id
     return {
       id,
-      // title,
-      // date,
-      // github_link,
-      // description,
       ...matterResult.data,
     };
   });
@@ -63,32 +47,27 @@ export function getAllPostIds() {
   });
 }
 
-// export function getPostData(id) {
-//   const fullPath = path.join(postsDirectory, `${id}.md`);
-//   const fileContents = fs.readFileSync(fullPath, 'utf8');
-
-//   // Use gray-matter to parse the post metadata section
-//   const matterResult = matter(fileContents);
-
-//   // Combine the data with the id
-//   return {
-//     id,
-//     ...matterResult.data,
-//   };
-// }
-
 export async function getPostData(id) {
-  const fullPath = path.join(postsDirectory, `${id}.md`);
-  const fileContents = fs.readFileSync(fullPath, "utf8");
+  const res = await fetch(
+    `https://raw.githubusercontent.com/dream-faster/${id}/main/README.md`
+  ).then((response) => response.text());
+  const fileContents = await res;
+
+  const localMDPath = path.join(postsDirectory, `${id}.md`);
+  const localFileContents = fs.readFileSync(localMDPath, "utf8");
 
   // Use gray-matter to parse the post metadata section
-  const matterResult = matter(fileContents);
+  const matterResult = matter(localFileContents);
 
   // Use remark to convert markdown into HTML string
-  const processedContent = await remark({ allowDangerousHTML: true })
+  const processedLocalContent = await remark()
     .use(html)
     .process(matterResult.content);
-  const contentHtml = processedContent.toString();
+
+  const processedContent = await remark().use(html).process(fileContents);
+
+  const contentHtml =
+    processedLocalContent.toString() + processedContent.toString();
 
   // Combine the data with the id and contentHtml
   return {

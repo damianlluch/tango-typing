@@ -1,3 +1,4 @@
+import GitHub from "@/components/GitHub";
 import { MajorButton } from "@/components/MajorButton";
 import { Article } from "@/templates/Article";
 import OneSection from "@/templates/OneSection";
@@ -7,6 +8,7 @@ import ProjectsSection from "./ProjectsSection";
 export const ProjectPage = ({ data, relatedData, relatedType }) => (
   <div className="w-full">
     <Article>
+      {data.github_link && <GitHub url={data.github_link} />}
       <article className="prose prose-zinc w-full dark:prose-invert ">
         <h3> {data.description} </h3>
         <div

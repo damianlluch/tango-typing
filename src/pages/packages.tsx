@@ -2,7 +2,7 @@ import BreadcrumbSection from "@/components/BreadcrumbSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import Seperator from "@/components/Seperator";
 import { Meta } from "@/layouts/Meta";
-import { getSortedProjectsData } from "@/lib/projects";
+import { getSortedPackagesData } from "@/lib/packages";
 import { Main } from "@/templates/Main";
 import OneSection from "@/templates/OneSection";
 
@@ -18,17 +18,17 @@ export default function Index({
       wide={true}
       meta={
         <Meta
-          title="Projects >> Dream Faster AI Studio"
+          title="Packages >> Dream Faster AI Studio"
           description="ML Studio specialized in Forecasting/Nowcasting."
-          social_card_ending="projects"
+          social_card_ending="packages"
         />
       }
     >
-      <OneSection title="projects 👇">
+      <OneSection title="packages 👇">
         <div className="w-full px-12">
           <BreadcrumbSection />
         </div>
-        <ProjectsSection allPostsData={allPostsData} baseUrl="projects" all />
+        <ProjectsSection allPostsData={allPostsData} baseUrl="packages" all />
       </OneSection>
       <Seperator />
     </Main>
@@ -36,7 +36,7 @@ export default function Index({
 }
 
 export async function getStaticProps() {
-  const allPostsData = getSortedProjectsData();
+  const allPostsData = getSortedPackagesData();
   return {
     props: {
       allPostsData,

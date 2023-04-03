@@ -1,6 +1,6 @@
 import { getAllTopicIds, getTopicData } from "@/lib/topics";
 
-import { getSortedPostsData } from "@/lib/projects";
+import { getSortedProjectsData } from "@/lib/projects";
 
 import { Meta } from "@/layouts/Meta.tsx";
 import { Main } from "@/templates/Main.tsx";
@@ -38,7 +38,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const topicData = await getTopicData(params.id);
-  const postData = await getSortedPostsData();
+  const postData = await getSortedProjectsData();
 
   const topicTags = topicData.tag.split(",");
 
