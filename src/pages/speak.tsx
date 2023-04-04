@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import { MajorButton } from "@/components/MajorButton";
 import { Meta } from "@/layouts/Meta";
-import { getSortedProjectsData } from "@/lib/projects";
+import { getSortedPackagesData } from "@/lib/packages";
 import { getSortedTopicsData } from "@/lib/topics";
 import { Article } from "@/templates/Article";
 import { Main } from "@/templates/Main";
@@ -61,7 +61,7 @@ const collaborationOptions = [
     emailSubject: "Proof of Concept inquiry - [ Project Name ] - [ Pitch ]",
     emailBody: `${welcome}We are interested in collaborating with you!%0D%0D Here is the short pitch on the project we need help with:${projectDescription}${goodbye}${standardOptions}`,
     interactive: getPosts(true),
-    baseUrl: "projects",
+    baseUrl: "packages",
   },
   {
     name: "Thinking of auditing existing Time Series ML pipelines?",
@@ -85,10 +85,12 @@ const collaborationOptions = [
 ];
 
 const Collaborate = ({
-  allPostsData,
+  allPackagesData,
+  // allProjectsData,
   allTopicsData,
 }: {
-  allPostsData: [string, string, string, string];
+  allPackagesData: [string, string, string, string];
+  // allProjectsData: [string, string, string, string];
   allTopicsData: [string, string, string, string];
 }): JSX.Element => (
   <Main
@@ -110,8 +112,8 @@ const Collaborate = ({
             <p dangerouslySetInnerHTML={{ __html: option.description }} />
             <p>
               {option.interactive(
-                option.baseUrl === "projects"
-                  ? allPostsData.slice(0, 3)
+                option.baseUrl === "packages"
+                  ? allPackagesData.slice(0, 3)
                   : allTopicsData,
                 option.baseUrl
               )}
@@ -149,11 +151,13 @@ const Collaborate = ({
 export default Collaborate;
 
 export async function getStaticProps() {
-  const allPostsData = getSortedProjectsData();
+  const allPackagesData = getSortedPackagesData();
+  // const allProjectsData = getSortedProjectsData();
   const allTopicsData = getSortedTopicsData();
   return {
     props: {
-      allPostsData,
+      allPackagesData,
+      // allProjectsData,
       allTopicsData,
     },
   };
