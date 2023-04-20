@@ -123,7 +123,7 @@ const Collaborate = ({
               primary
               external
               text="Book a meeting"
-              link={"https://calendly.com/mark-szulyovszky/consultation"}
+              link={"https://calendly.com/nowcasting/consultation"}
             />
             <MajorButton
               solo
